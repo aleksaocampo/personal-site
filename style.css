@@ -38,6 +38,11 @@ section h2 {
   text-align: center;
 }
 
+/* Center the h4 heading in the skills section */
+#skills h4 {
+  text-align: center;
+}
+
 /* Style lists */
 ul {
   list-style-type: disc;
@@ -78,7 +83,7 @@ a:hover {
   aspect-ratio: 1 / 1;    /* Ensures the image is always a square */
   border-radius: 50%;     /* Makes the image a perfect circle */
   border: 2px solid #e3bbbd; /* Blue border */
-  background: #e1e1e1;    /* Light gray background if image fails to load */
+  background: #f7efda;    /* Light gray background if image fails to load */
   object-fit: cover;      /* Ensures the image fills the circle */
 }
 
@@ -89,10 +94,77 @@ footer {
   color: 	#6f5e4f;
   background-color: #e3bbbd;
   font-size: 14px;
-  border-top: 1px solid #e1e1e1;
+  border-top: 1px solid #f7efda;
   margin-top: 24px;
 }
 
 .center-text {
   text-align: center;
+}
+
+/* Style the navigation bar */
+.navigation {
+  background-color: #df949d; /* Light background for the nav bar */
+  padding: 10px 0;
+  margin-bottom: 16px;
+}
+
+/* Remove default list styling and display items in a row */
+.nav-list {
+  list-style: none; /* Remove bullets */
+  display: flex;    /* Display list items in a row */
+  justify-content: center; /* Center the nav bar */
+  gap: 24px;        /* Space between links */
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the navigation links */
+.nav-list a {
+  color: #f7efda;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+/* Style the skills table to center it and add spacing */
+.skills-table {
+  margin: 0 auto 16px auto; /* Center the table */
+  border-collapse: separate;
+  border-spacing: 80px 15px; /* Space between icons */
+  text-align: center;        /* Center text in cells */
+  width: auto;
+}
+
+.skills-table i {
+  font-size: 32px;   /* Make icons larger */
+  color: #df949d;    /* Match your site colors */
+  margin-bottom: 8px;
+}
+
+/* Style the contact list for better spacing */
+.contact-list {
+  list-style: none;      /* Remove bullets */
+  padding: 0;
+  margin: 0;
+  text-align: center;    /* Center the contact info */
+}
+
+.contact-list li {
+  margin-bottom: 12px;   /* Space between contact items */
+  font-size: 18px;
+}
+
+.contact-list i {
+  margin-right: 8px;     /* Space between icon and text */
+  color: #df949d;        /* Match your color scheme */
+  vertical-align: middle;
+}
+
+.contact-text {
+  vertical-align: middle;
 }

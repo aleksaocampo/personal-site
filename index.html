@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>My Personal Site</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <!-- Website Header -->
@@ -11,6 +13,19 @@
     <h1>Aleksa's Portfolio</h1>
     <p>ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧</p>
   </header>
+
+  <section id="navigation" class="navigation">
+    <!-- Simple navigation bar with links to each section -->
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </section>
 
   <!-- About Me Section -->
   <section id="about" class=" center-text">
@@ -32,15 +47,44 @@
   <!-- Skills Section -->
   <section id="skills">
     <h2>Skills</h2>
-    <ul class="three-columns">
-      <!-- List your skills here -->
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>Python</li>
-      <li>Java</li>
-      <li>C++</li>
-      <li>Empathy</li>
-    </ul>
+    <h4>Here are some of the tools in my toolbox!</h4>
+    <!-- Use a simple table for three columns with icons -->
+    <table class="skills-table">
+      <tr>
+        <td>
+          <!-- HTML icon -->
+          <i class="fa-brands fa-html5"></i><br>
+          HTML
+        </td>
+        <td>
+          <!-- CSS icon -->
+          <i class="fa-brands fa-css3-alt"></i><br>
+          CSS
+        </td>
+        <td>
+          <!-- Python icon -->
+          <i class="fa-brands fa-python"></i><br>
+          Python
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <!-- Java icon -->
+          <i class="fa-brands fa-java"></i><br>
+          Java
+        </td>
+        <td>
+          <!-- C++ icon (using code icon as Font Awesome doesn't have a C++ logo) -->
+          <i class="fa-solid fa-code"></i><br>
+          C++
+        </td>
+        <td>
+          <!-- Empathy icon (using heart icon) -->
+          <i class="fa-solid fa-heart"></i><br>
+          Empathy
+        </td>
+      </tr>
+    </table>
   </section>
 
   <!-- Projects Section -->
@@ -60,23 +104,33 @@
   <!-- Interests Section (moved near bottom) -->
   <section id="interests">
     <h2>Interests</h2>
-    <ul>
+    <ul class = "three-columns">
       <!-- List your interests here -->
       <li>Volunteering</li>
-      <li>Design</li>
+      <li>Games</li>
       <li>Music</li>
       <li>Social Justice</li>
       <li>Cultural Diversity</li>
+      <li>Gardening</li>
+      <li>TV/Film</li>
+      <li>Interior Design</li>
     </ul>
   </section>
 
   <!-- Contact Section (moved near bottom) -->
   <section id="contact">
     <h2>Contact</h2>
-    <ul>
-      <!-- Add your contact details below -->
-      <li>Email: aleksaocampoUSA@gmail.com</li>
-      <li>LinkedIn: <a href="www.linkedin.com/in/aleksaocampo">AleksaOcampo</a></li>
+    <ul class="contact-list">
+      <li>
+        <!-- Email with envelope icon and space -->
+        <i class="fa-solid fa-envelope"></i>
+        <span class="contact-text">AleksaOcampoUSA@gmail.com</span>
+      </li>
+      <li>
+        <!-- LinkedIn with LinkedIn icon and space -->
+        <i class="fa-brands fa-linkedin"></i>
+        <a class="contact-text" href="https://www.linkedin.com/in/aleksaocampo">AleksaOcampo</a>
+      </li>
     </ul>
   </section>
 
