@@ -35,6 +35,7 @@ section {
 section h2 {
   margin-bottom: 12px;
   color: 	#df949d;
+  text-align: center;
 }
 
 /* Style lists */
@@ -42,6 +43,13 @@ ul {
   list-style-type: disc;
   margin-left: 20px;
   margin-bottom: 8px;
+}
+
+/* This class makes the list display in three columns */
+.three-columns {
+  columns: 4; /* Split the list into 3 columns */
+  -webkit-columns: 4; /* For older browsers */
+  -moz-columns: 4;
 }
 
 /* Style links */
