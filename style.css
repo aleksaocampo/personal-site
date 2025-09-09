@@ -7,15 +7,15 @@ body, h1, h2, p, ul, li {
 /* Set a simple background color and font for the whole page */
 body {
   font-family: Arial, sans-serif; /* Easy-to-read font */
-  background-color: #f9f9f9;      /* Light background */
-  color: #222;                    /* Dark text for contrast */
+  background-color:	#97976a;      /* Light background */
+  color: #6f5e4f;                    /* Dark text for contrast */
   line-height: 1.6;               /* More readable lines */
 }
 
 /* Style the header section */
 header {
-  background-color: #4f8cff;      /* Blue header */
-  color: white;
+  background-color: 	#df949d;      /* Blue header */
+  color: 	#f7efda;
   padding: 24px 0;
   text-align: center;
   margin-bottom: 24px;
@@ -23,7 +23,7 @@ header {
 
 /* Style each main section */
 section {
-  background: white;
+  background: 	#f7efda;
   max-width: 600px;               /* Keeps content readable */
   margin: 16px auto;              /* Center sections */
   padding: 20px;
@@ -34,7 +34,7 @@ section {
 /* Section headings */
 section h2 {
   margin-bottom: 12px;
-  color: #4f8cff;
+  color: 	#df949d;
 }
 
 /* Style lists */
@@ -46,7 +46,7 @@ ul {
 
 /* Style links */
 a {
-  color: #4f8cff;
+  color: 	#df949d;
   text-decoration: none;
 }
 
@@ -69,7 +69,7 @@ a:hover {
   height: 120px;          /* Set height to make it a square */
   aspect-ratio: 1 / 1;    /* Ensures the image is always a square */
   border-radius: 50%;     /* Makes the image a perfect circle */
-  border: 2px solid #4f8cff; /* Blue border */
+  border: 2px solid #e3bbbd; /* Blue border */
   background: #e1e1e1;    /* Light gray background if image fails to load */
   object-fit: cover;      /* Ensures the image fills the circle */
 }
@@ -78,8 +78,13 @@ a:hover {
 footer {
   text-align: center;
   padding: 16px 0;
-  color: #888;
+  color: 	#6f5e4f;
+  background-color: #e3bbbd;
   font-size: 14px;
   border-top: 1px solid #e1e1e1;
   margin-top: 24px;
+}
+
+.center-text {
+  text-align: center;
 }
