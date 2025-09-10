@@ -43,6 +43,10 @@ section h2 {
   text-align: center;
 }
 
+#interests h4 {
+  text-align: center;
+}
+
 /* Style lists */
 ul {
   list-style-type: disc;
