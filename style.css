@@ -13,6 +13,12 @@ body {
   line-height: 1.6;               /* More readable lines */
 }
 
+/* Prevent horizontal overflow on small devices and allow long words to wrap */
+html, body {
+  overflow-x: hidden;
+  word-break: break-word;
+}
+
 /* Use Silkscreen for prominent headings */
 header h1 {
   font-family: 'Silkscreen', 'Roboto Mono', sans-serif;
@@ -30,7 +36,8 @@ header {
 /* Style each main section */
 section {
   background: 	#f7efda;
-  max-width: 600px;               /* Keeps content readable */
+  max-width: 900px;               /* Keeps content readable on larger screens */
+  width: min(92%, 900px);         /* Scale on small screens */
   margin: 16px auto;              /* Center sections */
   padding: 20px;
   border-radius: 8px;             /* Rounded corners */
@@ -46,12 +53,14 @@ section h2 {
 }
 
 /* Center the h4 heading in the skills section */
-#skills h4 {
+#skills h5 {
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
 }
 
-#interests h4 {
+#interests h5 {
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
 }
 
 /* Style lists */
@@ -63,9 +72,9 @@ ul {
 
 /* This class makes the list display in three columns */
 .three-columns {
-  columns: 4; /* Split the list into 3 columns */
-  -webkit-columns: 4; /* For older browsers */
-  -moz-columns: 4;
+  columns: 3; /* Split the list into up to 3 columns on wide screens */
+  -webkit-columns: 3; /* For older browsers */
+  -moz-columns: 3;
 }
 
 /* Style links */
@@ -89,9 +98,9 @@ a:hover {
   You can replace the src in your HTML with your own headshot image.
 */
 .profile-picture img {
-  width: 120px;           /* Set width */
-  height: 120px;          /* Set height to make it a square */
-  aspect-ratio: 1 / 1;    /* Ensures the image is always a square */
+  max-width: 120px;        /* Limit width but allow scaling */
+  width: 100%;
+  height: auto;           /* Maintain aspect ratio */
   border-radius: 50%;     /* Makes the image a perfect circle */
   border: 2px solid #e3bbbd; /* Blue border */
   background: #f7efda;    /* Light gray background if image fails to load */
@@ -128,6 +137,11 @@ footer {
   gap: 24px;        /* Space between links */
   padding: 0;
   margin: 0;
+}
+
+/* Allow nav items to wrap on small screens */
+.nav-list {
+  flex-wrap: wrap;
 }
 
 /* Style the navigation links */
@@ -171,19 +185,38 @@ html {
 }
 
 
-/* Style the skills table to center it and add spacing */
-.skills-table {
-  margin: 0 auto 16px auto; /* Center the table */
-  border-collapse: separate;
-  border-spacing: 80px 15px; /* Space between icons */
-  text-align: center;        /* Center text in cells */
-  width: auto;
+/* Skills grid (replaces table-based layout) */
+.skill-grid {
+  margin: 0 auto 16px auto;
+  max-width: 640px;
+  width: 100%;
 }
 
-.skills-table i {
-  font-size: 32px;   /* Make icons larger */
-  color: #df949d;    /* Match your site colors */
-  margin-bottom: 8px;
+.skill-grid .row {
+  align-items: center;
+}
+
+.skill-item {
+  padding: 8px 6px;
+  text-align: center;
+}
+
+.skill-grid i {
+  font-size: 32px; /* icon size */
+  color: #df949d;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+.skill-label {
+  font-size: 1rem;
+}
+
+/* Ensure skill labels wrap and don't overflow */
+.skill-item {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 /* Style the contact list for better spacing */
@@ -192,6 +225,28 @@ html {
   padding: 0;
   margin: 0;
   text-align: center;    /* Center the contact info */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .three-columns { columns: 2; }
+}
+
+@media (max-width: 480px) {
+  .three-columns { columns: 1; }
+  section { padding: 14px; }
+  header h1 { font-size: 1.6rem; }
+}
+
+/* Smaller text/icons for very small screens to avoid overflow */
+@media (max-width: 420px) {
+  .skill-grid { font-size: 0.9rem; }
+  .skill-grid i { font-size: 24px; }
+}
+
+@media (max-width: 360px) {
+  .skill-grid { font-size: 0.85rem; }
+  .skill-grid i { font-size: 20px; }
 }
 
 .contact-list li {
