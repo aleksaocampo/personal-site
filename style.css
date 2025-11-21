@@ -249,6 +249,54 @@ html {
   .skill-grid i { font-size: 20px; }
 }
 
+/* Carousel image styling */
+.carousel-img {
+  max-height: 420px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .carousel-img { max-height: 280px; }
+}
+
+@media (max-width: 420px) {
+  .carousel-img { max-height: 200px; }
+  .carousel-caption { display: none; } /* hide overlay captions on very small screens */
+  /* mobile caption area below carousel */
+  #projectsCaption {
+    background: #e3bbbd;
+    color: #6f5e4f;
+    padding: 10px 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+}
+
+/* Project cards image styling */
+.project-cards .card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .project-cards .card-img-top { height: 140px; }
+}
+
+@media (max-width: 420px) {
+  .project-cards .card-img-top { height: 120px; }
+}
+
+/* Project card background to match requested color */
+.project-cards .card {
+  background-color: #e3bbbd;
+  color: #6f5e4f;
+  border: none;
+}
+
+.project-cards .card .card-title {
+  color: #6f5e4f;
+}
+
 .contact-list li {
   margin-bottom: 12px;   /* Space between contact items */
   font-size: 18px;
